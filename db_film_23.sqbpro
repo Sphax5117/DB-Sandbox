@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="U:/Documents/nsi deuxième édutuib/DB/db_film_23.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2076"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,11:mainnationalite"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="nationalite" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="96"/><column index="2" value="112"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="realisateurs" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="98"/><column index="2" value="114"/><column index="3" value="136"/><column index="4" value="111"/><column index="5" value="175"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="create_tables.sql">
+ CREATE TABLE &quot;realisateurs&quot;
+ (
+ id_realisateur INTEGER NOT NULL UNIQUE,
+ nom_realisateur char (45) NOT NULL,
+ prenom_realisateur char (45) NULL,
+ ddn_realisateur date,
+ id_nationalite_realisateur char (45) NULL,
+ CONSTRAINT pk_realisateur PRIMARY KEY (id_realisateur AUTOINCREMENT),
+ CHECK (ddn_realisateur BETWEEN &quot;1891-01-01&quot; AND &quot;2100-12-31&quot;)
+ );
+
+ CREATE TABLE &quot;nationalite&quot;
+ (
+ 	id_nationalite INTEGER NOT NULL UNIQUE,
+ 	nom_nationalite TEXT NOT NULL,
+ 	CONSTRAINT pk_nationalite PRIMARY KEY (id_nationalite AUTOINCREMENT)
+ );
+</sql><sql name="delete_tables.sql">DROP TABLE realisateurs;
+
+DROP TABLE nationalite;</sql><sql name="insert_values.sql">
+ INSERT INTO realisateurs
+ (nom_realisateur, prenom_realisateur, ddn_realisateur, id_nationalite_realisateur)
+ VALUES
+ (&quot;Abrams&quot;, &quot;Jeffrey Jacob&quot;, &quot;1966-06-27&quot;, &quot;US&quot;);
+ 
+ INSERT INTO realisateurs
+ (nom_realisateur, prenom_realisateur, ddn_realisateur, id_nationalite_realisateur)
+ VALUES
+ ('Badham', 'John', &quot;1939-08-25&quot;, 'Royaume-Uni'),
+ ('Besson', 'Luc', &quot;1959-03-18&quot;, 'France'),
+ ('Branagh', 'Kenneth', &quot;1960-12-10&quot;, 'Royaume-Uni'),
+ ('Johnson', 'Rian', &quot;1973-12-17&quot;, 'Etats-Unis'),
+ ('Kershner', 'Irvin', &quot;1923-04-29&quot;, 'Etats-Unis'),
+ ('Lucas', 'George', &quot;1944-05-14&quot;, 'Etats-Unis'),
+ ('Marquand', 'Richard', &quot;1937-09-22&quot;,'Royaume-Uni'),
+ ('Spielberg', 'Steven', &quot;1946-12-18&quot;,'Etats-Unis'),
+ ('Tarantino', 'Quentin', &quot;1963-03-27&quot;, 'Etats-Unis'),
+ ('Lumet', 'Sidney', &quot;1924-06-25&quot;, 'Etats-Unis');
+ 
+
+ 
+ INSERT INTO nationalite
+ (nom_nationalite)
+ VALUES
+ (&quot;Etats-Unis&quot;),
+ (&quot;France&quot;),
+ (&quot;Royaume-Uni&quot;)</sql><sql name="delete_values.sql">
+ DELETE FROM realisateurs
+ WHERE id_realisateur = 7;
+ 
+ DELETE FROM realisateurs
+ WHERE id_nationalite_realisateur = &quot;US&quot; OR id_nationalite_realisateur = &quot;Etats-Unis&quot;;
+ 
+ DELETE FROM realisateurs
+ WHERE id_realisateur &gt; 1;
+ 
+
+</sql><sql name="SQL 6"> UPDATE realisateurs
+ SET id_nationalite_realisateur = &quot;1&quot;
+ WHERE id_nationalite_realisateur LIKE &quot;E%&quot;;  -- Remplace toute les nationalités qui commencent par E, par 1.
+ 
+ UPDATE realisateurs
+ SET id_nationalite_realisateur = &quot;2&quot;
+ WHERE id_nationalite_realisateur LIKE &quot;F%&quot;; -- Remplace toute les nationalités qui commencent par F, par 2.
+ 
+ UPDATE realisateurs
+ SET id_nationalite_realisateur = 3
+ WHERE id_nationalite_realisateur LIKE 'R%'; -- Remplace toute les nationalités qui commencent par R, par 3.
+ 
+</sql><current_tab id="4"/></tab_sql></sqlb_project>
