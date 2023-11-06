@@ -1,0 +1,76 @@
+Security footage shows that there were 2 witnesses. 
+The first witness lives at the last house on "Northwestern Dr" => Northwestern Dr	(no) 4919	Morty Schapiro	14887
+The second witness, named Annabel, lives somewhere on "Franklin Ave". Annabel Miller	Franklin Ave	16371
+
+Morty : 
+I heard a gunshot and then saw a man run out. He had a "Get Fit Now Gym" bag. 
+The membership number on the bag started with "48Z". 
+Only gold members have those bags. 
+The man got into a car with a plate that included "H42W".
+
+Annabel :
+I saw the murder happen, and I recognized the killer from my gym when I was working out last week on January the 9th.
+
+Three suspects : 
+
+48Z38	49550	Tomas Baisley
+48Z7A	28819	Joe Germuska
+48Z55	67318	Jeremy Bowers
+
+We need to see if he checked in on January the 9th
+
+Tomas wasn't here on the 9th of January.
+
+Now we need  to run the plates on : 
+
+48Z7A	28819	Joe Germuska License ID => 173289
+48Z55	67318	Jeremy Bowers License ID => 423327
+
+So, if one of those two ID correspond to THE plate with H42W, it's the murderer
+
+The only one is him : 423327	0H42W2
+
+So, it must be Jeremy Bowers.
+
+We need now to run his transcript to find the commanditary of the murder.
+
+I was hired by a woman with a lot of money.
+ I don't know her name but I know she's around 5'5" (65") or 5'7" (67").
+ She has red hair and she drives a Tesla Model S. 
+I know that she attended the SQL Symphony Concert 3 times in December 2017.
+
+
+All these person attended to the concert : 
+Let's check which one has a Tesla and red hair
+
+13296	327999
+17602	753528
+17884	125430
+19260	746096
+19292	681197
+24556	101191
+28166	153761
+37213	379312
+39020	361725
+46399	665439
+46634	830930
+48201	637536
+49568	391978
+58898	202759
+60708	732743
+78181	150092
+81360	622427
+83144	115180
+86843	637186
+90171	146111
+92343	575390
+93726	544819
+99116	457986
+99716	202298
+99799	781215
+
+The only one is : 202298	Model S	Tesla
+
+We just have to run it's id
+
+The commanditor is Miranda Priestly	Golden Ave	202298
